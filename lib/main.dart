@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // Quita la etiqueta de debug
+      debugShowCheckedModeBanner: false,
       title: 'Hola Mundo Flutter',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const HomePage(),
@@ -28,15 +28,23 @@ class HomePage extends StatelessWidget {
         title: const Text('Hola Mundo en Flutter'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          '¡Hello, Arlen Martin Martinez!',
-          style: TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-            color: Colors.pink,
-          ),
-          textAlign: TextAlign.center,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              '¡Hello, Arlen Martin Martinez!',
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+                color: Colors.pink,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 20),
+            // Imagen local de Kirby
+            Image.asset('assets/kirby.jpg', width: 100, height: 100),
+          ],
         ),
       ),
     );
